@@ -1,0 +1,291 @@
+// 公共样式
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body,#app,.five_box,#five_cavs{
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.mb_10 {
+	margin-bottom: 10px!important;
+}
+
+.ml_5 {
+	margin-left: 5px!important;
+}
+
+.ml_10 {
+	margin-left: 10px!important;
+}
+
+.cursor_pointer {
+	cursor: pointer;
+}
+
+.active {
+	color: #1296db;
+}
+.control-input{
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+  text-indent: 12px;
+}
+
+.d-none {
+	display: none!important;
+}
+
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #0009;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress {
+	width: 100%;
+	height: 5px;
+	background-color: #ffffff80;
+	background-color: #7aa6f780;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #d11d1d;
+	margin-left: 5px;
+}
+
+.watermark {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: transparent;
+	color: #eee;
+}
+
+.share_panel {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 6px 10px;
+	border-radius: 20px;
+	background-color: #ffffff80;
+  z-index: 12;
+}
+.share_panel .s_icon {
+  display: block;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.share_panel .control_volume.open .s_icon{
+  background-image: url(~@/assets/img/volume-open.png);
+}
+.share_panel .control_volume.close .s_icon{
+  background-image: url(~@/assets/img/volume-close.png);
+}
+.share_panel .control_share .s_icon{
+  background-image: url(~@/assets/img/share.png);
+}
+.tag {
+	position: absolute;
+	width: 0;
+	height: 0;
+	transform: translateZ(0);
+}
+
+.tag-pannel {
+	position: absolute;
+	padding: 6px 10px;
+	transform: translate(-50%);
+	left: 50%;
+	bottom: 10px;
+	background-color: #00000080;
+	color: #fff;
+	border-radius: 6px;
+	text-align: center;
+	font-size: 12px;
+  white-space: nowrap;
+}
+
+.tag-pannel:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	bottom: -5px;
+	transform: translate(-50%) rotate(45deg);
+	background: #333;
+	pointer-events: none;
+}
+
+.control-video {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+  z-index: 10;
+}
+
+.control-video .control-state-item {
+	display: flex;
+	align-items: center;
+	padding: 6px 10px;
+	background-color: #ffffff4d;
+	border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.control-video .control-state-item .v-img {
+	width: 16px;
+	height: 16px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.control-video .control-state-item.lookAround-start .v-img {
+  background-image: url(~@/assets/img/recorder.png);
+}
+.control-video .control-state-item.lookAround-play .v-img {
+  background-image: url(~@/assets/img/play.png);
+}
+.control-video .control-state-item.lookAround-stop .v-img {
+  background-image: url(~@/assets/img/stop.png);
+}
+
+.control-groups {
+	width: 100%;
+	position: absolute;
+	bottom: 110px;
+	left: 0;
+	display: flex;
+	justify-content: center;
+  z-index: 12;
+}
+
+.control-groups .control-ul {
+	max-width: 80%;
+	background-color: #ffffff4d;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+.control-groups .control-ul .control-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.control-groups .control-ul .control-item .d-img {
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+.control-groups .control-ul .control-item.convention .d-img {
+	background-image: url('~@/assets/img/await.png');
+}
+.control-groups .control-ul .control-item.barrager .d-img {
+	background-image: url('~@/assets/img/barrager.png');
+}
+.control-groups .control-ul .control-item.lookAround-tag .d-img{
+	background-image: url('~@/assets/img/tag.png');
+}
+
+.control-groups .control-ul .control-item.Panorama .d-img {
+	background-image: url('~@/assets/img/panorama.png');
+}
+
+.control-groups .control-ul .control-item.Floorplan .d-img {
+	background-image: url('~@/assets/img/3d.png');
+}
+
+.control-groups .control-ul .control-item.Panorama.active .d-img {
+	background-image: url('~@/assets/img/panorama_active.png');
+}
+
+.control-groups .control-ul .control-item.Floorplan.active .d-img {
+	background-image: url('~@/assets/img/3d_active.png');
+}
+
+.control-project {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: #ffffff4d;
+}
+
+.control-project .control-project-ul {
+	width: 100%;
+	border-radius: 20px;
+	display: flex;
+	padding: 10px;
+	overflow-x: auto;
+	cursor: pointer;
+	justify-content: center;
+}
+
+.control-project .control-project-ul .control-project-item {
+	border-radius: 10px;
+	margin-left: 10px;
+}
+
+.control-project .control-project-ul .control-project-item.active {
+	transform: scale(1.1);
+}
+
+.control-project .control-project-ul .control-project-item:first-of-type {
+	margin-left: 0;
+}
+.control-project .control-project-ul .control-project-item .project-bg {
+	width: 80px;
+	height: 80px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+}
+.control-project .control-project-ul .control-project-item:nth-child(1) .project-bg {
+	background-image: url('~@/assets/img/project0.jpg');
+}
+.control-project .control-project-ul .control-project-item:nth-child(2) .project-bg {
+	background-image: url('~@/assets/img/project1.jpg');
+}
